@@ -957,7 +957,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.memory.pasrmanager@1.1 \
     vendor.qti.power.pasrmanager@1.0 \
     vendor.qti.qspmhal@1.0-impl \
-    vendor.qti.qspmhal@1.0_vendor \
+    vendor.qti.qspmhal@1.0 \
     bm2n00 \
     bm2n01 \
     bm2n02 \
