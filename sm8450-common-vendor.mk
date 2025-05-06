@@ -6,6 +6,7 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/oneplus/sm8450-common
 
 PRODUCT_COPY_FILES += \
+    vendor/oneplus/sm8450-common/proprietary/odm/etc/aac_richtap.config:$(TARGET_COPY_OUT_ODM)/etc/aac_richtap.config \
     vendor/oneplus/sm8450-common/proprietary/odm/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_ODM)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
     vendor/oneplus/sm8450-common/proprietary/odm/etc/init/vendor-oplus-hardware-performance-V1-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor-oplus-hardware-performance-V1-service.rc \
     vendor/oneplus/sm8450-common/proprietary/odm/etc/init/vendor.pixelworks.hardware.feature.irisfeature-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.pixelworks.hardware.feature.irisfeature-service.rc \
@@ -474,6 +475,7 @@ PRODUCT_PACKAGES += \
     libTrustedUI \
     libTrustedUITZ \
     libTrustedUIVM \
+    libaacvibrator \
     libadaptlaunch \
     libadm \
     libadreno_app_profiles \
@@ -874,7 +876,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.embmssl@1.0 \
     vendor.qti.hardware.embmssl@1.1-adapter-helper \
     vendor.qti.hardware.embmssl@1.1 \
-    vendor.qti.hardware.fm@1.0 \
     vendor.qti.hardware.iop@1.0 \
     vendor.qti.hardware.iop@2.0 \
     vendor.qti.hardware.mwqemadapter@1.0 \
@@ -1285,7 +1286,8 @@ PRODUCT_PACKAGES += \
     vendor.pixelworks.hardware.display.iris-service \
     vendor.pixelworks.hardware.feature.irisfeature-service \
     irisConfig \
-    oplus_sensor_fb
+    oplus_sensor_fb \
+    touchHidlTest
 
 PRODUCT_PACKAGES += \
     system_ext_priv-app_ims_lib64_arm64_libimscamera_jni_so \
