@@ -1090,6 +1090,7 @@ PRODUCT_PACKAGES += \
     libwvdrmengine \
     vendor.oplus.hardware.cwb@1.0 \
     vendor.oplus.hardware.performance-V1-ndk_platform \
+    vendor.oplus.hardware.touch-V2-ndk_platform \
     vendor.pixelworks.hardware.feature@1.0 \
     vendor.pixelworks.hardware.feature@1.1 \
     CACertService \

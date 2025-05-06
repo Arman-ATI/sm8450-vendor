@@ -3278,7 +3278,6 @@ cc_prebuilt_library_shared {
                 "vendor.qti.latency@2.1",
                 "vendor.qti.hardware.mwqemadapter@1.0",
                 "vendor.qti.data.mwqem@1.0",
-                "libwpa_client",
                 "android.hardware.wifi.hostapd@1.0",
                 "android.hardware.wifi.supplicant@1.0",
                 "libc++",
@@ -5676,7 +5675,6 @@ cc_prebuilt_library_shared {
                 "libcne",
                 "libqmi",
                 "libqmiservices",
-                "libwpa_client",
                 "libandroid_net",
                 "libcneqmiutils",
                 "vendor.qti.hardware.data.cne.internal.api@1.0",
@@ -19427,6 +19425,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.oplus.hardware.touch-V2-ndk_platform",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/vendor.oplus.hardware.touch-V2-ndk_platform.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.pixelworks.hardware.feature@1.0",
     owner: "oneplus",
     strip: {
@@ -21416,7 +21439,6 @@ cc_prebuilt_binary {
                 "libgps.utils",
                 "liblog",
                 "libnl",
-                "libwpa_client",
                 "libqmi_cci",
                 "libqmi_common_so",
                 "libdiag",
@@ -21536,7 +21558,6 @@ cc_prebuilt_binary {
                 "libidl",
                 "libandroid_net",
                 "libhidlbase",
-                "libwpa_client",
                 "libc++",
                 "libc",
                 "libm",
