@@ -6,7 +6,6 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/oneplus/sm8450-common
 
 PRODUCT_COPY_FILES += \
-    vendor/oneplus/sm8450-common/proprietary/odm/etc/aac_richtap.config:$(TARGET_COPY_OUT_ODM)/etc/aac_richtap.config \
     vendor/oneplus/sm8450-common/proprietary/odm/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_ODM)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
     vendor/oneplus/sm8450-common/proprietary/odm/etc/init/vendor-oplus-hardware-performance-V1-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor-oplus-hardware-performance-V1-service.rc \
     vendor/oneplus/sm8450-common/proprietary/odm/etc/init/vendor.pixelworks.hardware.feature.irisfeature-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.pixelworks.hardware.feature.irisfeature-service.rc \
@@ -99,10 +98,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8450-common/proprietary/vendor/etc/display/DPU820.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU820.xml \
     vendor/oneplus/sm8450-common/proprietary/vendor/etc/display/DPU8__.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU8__.xml \
     vendor/oneplus/sm8450-common/proprietary/vendor/etc/display/DPU9__.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU9__.xml \
-    vendor/oneplus/sm8450-common/proprietary/vendor/etc/display/advanced_sf_offsets.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/advanced_sf_offsets.xml \
     vendor/oneplus/sm8450-common/proprietary/vendor/etc/display/qdcm_calib_data_samsung_S6E3HC3_dsc_cmd_mode_panel.json:$(TARGET_COPY_OUT_VENDOR)/etc/display/qdcm_calib_data_samsung_S6E3HC3_dsc_cmd_mode_panel.json \
     vendor/oneplus/sm8450-common/proprietary/vendor/etc/display/qdcm_calib_data_samsung_S6E3HC3_dsc_cmd_mode_panel_21631.json:$(TARGET_COPY_OUT_VENDOR)/etc/display/qdcm_calib_data_samsung_S6E3HC3_dsc_cmd_mode_panel_21631.json \
-    vendor/oneplus/sm8450-common/proprietary/vendor/etc/display/thermallevel_to_fps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/thermallevel_to_fps.xml \
     vendor/oneplus/sm8450-common/proprietary/vendor/etc/dpm_vndr/vendor.dpm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/dpm_vndr/vendor.dpm.conf \
     vendor/oneplus/sm8450-common/proprietary/vendor/etc/eva/facedetection/model3.dat:$(TARGET_COPY_OUT_VENDOR)/etc/eva/facedetection/model3.dat \
     vendor/oneplus/sm8450-common/proprietary/vendor/etc/face3d/qcnn_concat_file_model-0324_2_encrypted:$(TARGET_COPY_OUT_VENDOR)/etc/face3d/qcnn_concat_file_model-0324_2_encrypted \
@@ -475,7 +472,6 @@ PRODUCT_PACKAGES += \
     libTrustedUI \
     libTrustedUITZ \
     libTrustedUIVM \
-    libaacvibrator \
     libadaptlaunch \
     libadm \
     libadreno_app_profiles \
@@ -512,7 +508,6 @@ PRODUCT_PACKAGES += \
     libcvp2_1 \
     libcvpcpuRev_skel \
     libcwb_client_vendor \
-    libcwb_qcom \
     libdataitems \
     libdiag \
     libdigital-dimming \
@@ -550,7 +545,6 @@ PRODUCT_PACKAGES += \
     libhdr_tm \
     libhdrdynamic \
     libhdrdynamicootf \
-    libhistogram \
     libidl \
     libizat_client_api \
     libizat_core \
@@ -593,7 +587,6 @@ PRODUCT_PACKAGES += \
     libmeters \
     libminkdescriptor \
     libminksocket_vendor \
-    libmm-hdcpmgr \
     libmmosal_vendor \
     libmmrtpdecoder_vendor \
     libmmrtpencoder_vendor \
@@ -677,7 +670,6 @@ PRODUCT_PACKAGES += \
     libqdma_file_agent \
     libqdp \
     libqdpr \
-    libqdutils \
     libqisl \
     libqmi \
     libqmi_cci \
@@ -717,13 +709,10 @@ PRODUCT_PACKAGES += \
     libscveObjectSegmentation \
     libscveObjectTracker \
     libscveObjectTracker_stub \
-    libsdedrm \
     libsdm-color \
     libsdm-colormgr-algo \
     libsdm-disp-vndapis \
-    libsdmcore \
     libsdmextension \
-    libsdmutils \
     libsdsprpc \
     libsecureui_svcsock \
     libsensor_calibration \
@@ -808,15 +797,15 @@ PRODUCT_PACKAGES += \
     sensors.ssc \
     libasphere \
     libshoebox \
-    vendor.display.color@1.0_vendor \
-    vendor.display.color@1.1_vendor \
-    vendor.display.color@1.2_vendor \
-    vendor.display.color@1.3_vendor \
+    vendor.display.color@1.0 \
+    vendor.display.color@1.1 \
+    vendor.display.color@1.2 \
+    vendor.display.color@1.3 \
     vendor.display.color@1.4 \
     vendor.display.color@1.5 \
     vendor.display.color@1.6 \
     vendor.display.color@1.7 \
-    vendor.display.postproc@1.0_vendor \
+    vendor.display.postproc@1.0 \
     vendor.libdpmctmgr \
     vendor.libdpmfdmgr \
     vendor.libdpmframework \
@@ -825,14 +814,10 @@ PRODUCT_PACKAGES += \
     vendor.oplus.hardware.appradioaidl-V1-ndk_platform \
     vendor.oplus.hardware.communicationcenter-V1-ndk_platform \
     vendor.oplus.hardware.communicationcenter-V2-ndk_platform \
-    vendor.oplus.hardware.cwb@1.0_vendor \
+    vendor.oplus.hardware.cwb@1.0 \
     vendor.oplus.hardware.ims-V1-ndk_platform \
     vendor.oplus.hardware.olc2-V1-ndk_platform \
     vendor.oplus.hardware.radio-V2-ndk_platform \
-    vendor.pixelworks.hardware.display@1.0 \
-    vendor.pixelworks.hardware.display@1.1 \
-    vendor.pixelworks.hardware.display@1.2 \
-    vendor.pixelworks.hardware.feature@1.0_vendor \
     vendor.qti.data.factory@2.0 \
     vendor.qti.data.factory@2.1 \
     vendor.qti.data.factory@2.2 \
@@ -846,7 +831,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.gnss-V3-ndk_platform \
     vendor.qti.gnss-service \
     vendor.qti.hardware.ListenSoundModel@1.0-impl \
-    vendor.qti.hardware.ListenSoundModel@1.0_vendor \
+    vendor.qti.hardware.ListenSoundModel@1.0 \
     vendor.qti.hardware.alarm@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
@@ -876,8 +861,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.embmssl@1.0 \
     vendor.qti.hardware.embmssl@1.1-adapter-helper \
     vendor.qti.hardware.embmssl@1.1 \
+    vendor.qti.hardware.fm@1.0 \
     vendor.qti.hardware.iop@1.0 \
-    vendor.qti.hardware.iop@2.0_vendor \
+    vendor.qti.hardware.iop@2.0 \
     vendor.qti.hardware.mwqemadapter@1.0 \
     vendor.qti.hardware.power.powermodule@1.0 \
     vendor.qti.hardware.qccsyshal@1.0_vendor \
@@ -885,7 +871,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qccvndhal@1.0-halimpl \
     vendor.qti.hardware.qccvndhal@1.0_vendor \
     vendor.qti.hardware.qconfig@1.0 \
-    vendor.qti.hardware.qdutils_disp@1.0 \
     vendor.qti.hardware.qseecom@1.0 \
     vendor.qti.hardware.qteeconnector@1.0 \
     vendor.qti.hardware.radio.am@1.0 \
@@ -1126,11 +1111,7 @@ PRODUCT_PACKAGES += \
     libsnapdragoncolor-pxlw \
     libziparchive_odm \
     libwvdrmengine \
-    vendor.oplus.hardware.cwb@1.0 \
     vendor.oplus.hardware.performance-V1-ndk_platform \
-    vendor.oplus.hardware.touch-V2-ndk_platform \
-    vendor.pixelworks.hardware.feature@1.0 \
-    vendor.pixelworks.hardware.feature@1.1 \
     CACertService \
     CneApp \
     IWlanService \
@@ -1183,7 +1164,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vpp@2.0-service.xml \
     device_manifest_communication_center_aidl.xml \
     manifest_android.hardware.drm@1.4-service.widevine.xml \
-    manifest_oplus_cwb.xml \
     manifest_performance_aidl.xml \
     vendor.pixelworks.hardware.display.iris-service.xml \
     vendor.pixelworks.hardware.feature.irisfeature-service.xml \
@@ -1210,7 +1190,6 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.0-service \
     vendor.qti.hardware.alarm@1.0-service \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
-    vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.iop@2.0-service \
     vendor.qti.hardware.perf-hal-service \
     vendor.qti.hardware.qseecom@1.0-service \
@@ -1287,8 +1266,7 @@ PRODUCT_PACKAGES += \
     vendor.pixelworks.hardware.display.iris-service \
     vendor.pixelworks.hardware.feature.irisfeature-service \
     irisConfig \
-    oplus_sensor_fb \
-    touchHidlTest
+    oplus_sensor_fb
 
 PRODUCT_PACKAGES += \
     system_ext_priv-app_ims_lib64_arm64_libimscamera_jni_so \
